@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Palace Boutique | Elegant Women's Dresses — Kenya</title>
+    <meta name="description" content="Fashion Palace Boutique — Curated collection of elegant women's dresses, maxi dresses, and occasion wear. Order via WhatsApp: +254 756 406 595.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline';">
+    <meta name="theme-color" content="#0C753F">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --deep-green: #0C753F;
+            --emerald: #14904E;
+            --light-green: #E8F5EE;
+            --cream: #FAF8F3;
+            --gold: #D4AF37;
+            --dark-gold: #B8860B;
+            --dark-brown: #2F2F2F;
+            --white: #FFFFFF;
+            --shadow: rgba(12, 117, 63, 0.08);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: var(--dark-brown);
+            background-color: var(--cream);
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .btn {
+            padding: 0.85rem 2.2rem;
+            border-radius: 4px;
+            font-size: 0.98rem;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: none;
+            font-family: inherit;
+            font-weight: 500;
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, var(--gold), var(--dark-gold));
+            color: var(--white);
+            box-shadow: 0 3px 10px rgba(212, 175, 55, 0.25);
+        }
+
+        .btn-gold:hover {
+            background: linear-gradient(135deg, var(--dark-gold), #996515);
+            transform: translateY(-2px);
+        }
+
+        .btn-green {
+            background: var(--deep-green);
+            color: var(--white);
+        }
+
+        .btn-green:hover {
+            background: #0A6034;
+        }
+
+        .btn-outline {
+            border: 2px solid var(--deep-green);
+            color: var(--deep-green);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: var(--deep-green);
+            color: var(--white);
+        }
+
+        /* ========== HEADER ========== */
+        header {
+            background: var(--white);
+            padding: 1.2rem 0;
+            border-bottom: 2px solid var(--light-green);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--deep-green);
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--gold);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.2rem;
+            font-size: 0.98rem;
+            color: var(--dark-brown);
+        }
+
+        .nav-links a:hover {
+            color: var(--deep-green);
+            transition: color 0.3s ease;
+        }
+
+        /* ========== HERO ========== */
+        .hero {
+            padding: 6rem 0;
+            background: linear-gradient(to right, rgba(232, 245, 238, 0.96), rgba(250, 248, 243, 0.92)), url('images/hero-banner.jpg') center/cover no-repeat;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 1.2rem;
+            color: var(--deep-green);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #4A4A4A;
+            margin-bottom: 2rem;
+            max-width: 480px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+
+        .rating-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(12, 117, 63, 0.08);
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(12, 117, 63, 0.15);
+        }
+
+        .stars {
+            color: var(--gold);
+            letter-spacing: 2px;
+        }
+
+        /* ========== SECTION BASE ========== */
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-head {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .section-head h2 {
+            font-size: 2.2rem;
+            margin-bottom: 0.8rem;
+            color: var(--deep-green);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-head h2::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--deep-green), var(--gold));
+            border-radius: 2px;
+        }
+
+        .section-head p {
+            color: #5A5A5A;
+            max-width: 550px;
+            margin: 1.5rem auto 0;
+            font-size: 1.05rem;
+        }
+
+        /* ========== FEATURED PRODUCTS ========== */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3.5rem 2.5rem;
+        }
+
+        .product-card {
+            background: var(--white);
+            text-align: center;
+            padding-bottom: 1.8rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px var(--shadow);
+            transition: all 0.35s ease;
+            border: 1px solid var(--light-green);
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(12, 117, 63, 0.12);
+        }
+
+        .product-image {
+            aspect-ratio: 3 / 4;
+            background: var(--light-green);
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .product-card h3 {
+            font-size: 1.08rem;
+            font-weight: 600;
+            margin-bottom: 0.6rem;
+            padding: 0 1.2rem;
+            color: var(--dark-brown);
+        }
+
+        .price {
+            color: var(--deep-green);
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+        }
+
+        .in-stock {
+            color: var(--deep-green);
+            font-size: 0.92rem;
+            margin-bottom: 1.2rem;
+            font-weight: 500;
+        }
+
+        /* ========== ABOUT ========== */
+        .about-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4.5rem;
+            align-items: center;
+        }
+
+        .about-image {
+            aspect-ratio: 4 / 5;
+            background: var(--light-green);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px var(--shadow);
+        }
+
+        .about-text h2 {
+            font-size: 2.1rem;
+            margin-bottom: 1.5rem;
+            color: var(--deep-green);
+        }
+
+        .about-text p {
+            color: #5A5A5A;
+            margin-bottom: 1.3rem;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        /* ========== WHY SHOP WITH US ========== */
+        .why-us {
+            background: var(--white);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            text-align: center;
+        }
+
+        .why-card {
+            padding: 2rem 1.5rem;
+            border-radius: 8px;
+            background: var(--light-green);
+            transition: transform 0.3s ease;
+        }
+
+        .why-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .why-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--deep-green);
+        }
+
+        .why-card p {
+            color: #5A5A5A;
+            font-size: 0.98rem;
+            line-height: 1.7;
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            background: var(--deep-green);
+            color: #D4E2DC;
+            padding: 4.5rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h3 {
+            color: var(--white);
+            font-size: 1.1rem;
+            margin-bottom: 1.3rem;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-col ul {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            font-size: 0.98rem;
+        }
+
+        .footer-col a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #9FC5B3;
+        }
+
+        /* ========== WHATSAPP FLOATING BUTTON ========== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: linear-gradient(135deg, #25D366, #1DA854);
+            color: white;
+            padding: 0.95rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+            z-index: 90;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            background: linear-gradient(135deg, #1ebe57, #189649);
+            transform: translateY(-2px);
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 900px) {
+            .about-wrapper {
+                grid-template-columns: 1fr;
+            }
+            .nav-links {
+                gap: 1.2rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2.1rem;
+            }
+            .nav-links {
+                display: none;
+            }
+            section {
+                padding: 3.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/254756406595" target="_blank" class="whatsapp-float">💬 Order via WhatsApp</a>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">Fashion <span>Palace</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="rating-badge">
+                    <span class="stars">★★★★★</span>
+                    <span>5.0 — Rated Boutique</span>
+                </div>
+                <h1>Welcome to Fashion Palace Boutique</h1>
+                <p>Where style reigns supreme. Elegant, modest, and beautifully tailored dresses — curated for the modern, confident woman.</p>
+                <div class="hero-buttons">
+                    <a href="#shop" class="btn btn-green">View Collection</a>
+                    <a href="https://wa.me/254756406595" target="_blank" class="btn btn-outline">Order via WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED PRODUCTS -->
+    <section id="shop">
+        <div class="container">
+            <div class="section-head">
+                <h2>Our Collection</h2>
+                <p>Timeless elegance, beautiful fits — every dress designed to make you shine.</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image"><img src="images/dress-1.jpg" alt="Burgundy Pleated Dress" loading="lazy"></div>
+                    <h3>Burgundy Pleated Midi Dress</h3>
+                    <p class="price">KES 3,500</p>
+                    <p class="in-stock">✓ In Stock</p>
+                    <a href="https://wa.me/254756406595?text=Hi%2C%20I%20am%20interested%20in%20the%20Burgundy%20Pleated%20Midi%20Dress" target="_blank" class="btn btn-gold">Order Now</a>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="images/dress-2.jpg" alt="Light Blue Elegant Dress" loading="lazy"></div>
+                    <h3>Light Blue Tailored Dress</h3>
+                    <p class="price">KES 3,500</p>
+                    <p class="in-stock">✓ In Stock</p>
+                    <a href="https://wa.me/254756406595?text=Hi%2C%20I%20am%20interested%20in%20the%20Light%20Blue%20Tailored%20Dress" target="_blank" class="btn btn-gold">Order Now</a>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="images/dress-3.jpg" alt="Emerald Green Dress" loading="lazy"></div>
+                    <h3>Emerald Green Classy Dress</h3>
+                    <p class="price">KES 3,500</p>
+                    <p class="in-stock">✓ In Stock</p>
+                    <a href="https://wa.me/254756406595?text=Hi%2C%20I%20am%20interested%20in%20the%20Emerald%20Green%20Classy%20Dress" target="_blank" class="btn btn-gold">Order Now</a>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="images/dress-4.jpg" alt="Lilac Pleated Dress" loading="lazy"></div>
+                    <h3>Lilac Pleated Maxi Dress</h3>
+                    <p class="price">KES 3,500</p>
+                    <p class="in-stock">✓ In Stock</p>
+                    <a href="https://wa.me/254756406595?text=Hi%2C%20I%20am%20interested%20in%20the%20Lilac%20Pleated%20Maxi%20Dress" target="_blank" class="btn btn-gold">Order Now</a>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="images/dress-5.jpg" alt="Peach Elegant Dress" loading="lazy"></div>
+                    <h3>Peach Bow Detail Dress</h3>
+                    <p class="price">KES 3,500</p>
+                    <p class="in-stock">✓ In Stock</p>
+                    <a href="https://wa.me/254756406595?text=Hi%2C%20I%20am%20interested%20in%20the%20Peach%20Bow%20Detail%20Dress" target="_blank" class="btn btn-gold">Order Now</a>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="images/dress-6.jpg" alt="Lime Green Short Dress" loading="lazy"></div>
+                    <h3>Lime Green Short Dress</h3>
+                    <p class="price">KES 3,500</p>
+                    <p class="in-stock">✓ In Stock</p>
+                    <a href="https://wa.me/254756406595?text=Hi%2C%20I%20am%20interested%20in%20the%20Lime%20Green%20Short%20Dress" target="_blank" class="btn btn-gold">Order Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" style="background: var(--white);">
+        <div class="container about-wrapper">
+            <div class="about-image">
+                <img src="images/boutique-about.jpg" alt="Fashion Palace Boutique — Elegant Dresses" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div class="about-text">
+                <h2>About Fashion Palace</h2>
+                <p>Step into a world where style reigns supreme. Fashion Palace Boutique is your destination for elegant, high-quality women's dresses — beautifully tailored, modest cuts, and timeless designs that celebrate the modern woman.</p>
+                <p>From everyday elegance to special occasion glamour, every piece is handpicked to bring out your best. We believe every woman deserves to feel like royalty — confident, beautiful, and comfortable in her own skin.</p>
+                <p> Order easily via WhatsApp — fast replies, friendly service, beautiful pieces delivered right to you.</p>
+                <a href="https://wa.me/254756406595" target="_blank" class="btn btn-green">Message Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY SHOP WITH US -->
+    <section class="why-us">
+        <div class="container">
+            <div class="section-head">
+                <h2>Why Shop With Us?</h2>
+                <p>Beautiful designs, fair prices, and a personal touch in every order.</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <h3> Curated Styles</h3>
+                    <p>Every dress handpicked for quality, fit, and elegance — modest cuts that flatter every shape.</p>
+                </div>
+                <div class="why-card">
+                    <h3>
+                     Easy Ordering</h3>
+                    <p>Just WhatsApp us — quick replies, friendly help, smooth process from selection to delivery.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Always In Stock</h3>
+                    <p>Most designs ready to go — order today, wear it soon. Updated collection weekly.</p>
+                </div>
+                <div class="why-card">
+                    <h3> Trusted & Rated</h3>
+                    <p>5.0  from our happy customers — quality you can trust, service you'll love.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER / CONTACT -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Fashion Palace Boutique</h3>
+                    <p style="color:#9FC5B3; font-size:0.98rem; line-height:1.7;">Where style reigns supreme. Elegant dresses for the confident, beautiful you.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#shop">Shop</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><a href="tel:+254756406595">+254 756 406 595</a></li>
+                        <li> <a href="https://wa.me/254756406595" target="_blank">WhatsApp Us</a></li>
+                        <li> <a href="mailto:fashionpalace@gmail.com">fashionpalace@gmail.com</a></li>
+                        <li> <a href="https://tiktok.com/@fashionpalace.ke" target="_blank">@fashionpalace.ke</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Open 24 Hours — Order anytime, we reply fast!</p>
+                <p style="margin-top:0.5rem;">&copy; 2026 Fashion Palace Boutique. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
